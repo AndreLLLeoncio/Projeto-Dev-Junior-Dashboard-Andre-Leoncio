@@ -82,7 +82,7 @@ export default function LoginForm() {
         )}
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full">
+      <Button type="submit" disabled={loading} className="w-full h-16 text-xl">
         {loading ? "Carregando..." : "Entrar"}
       </Button>
     </form>

@@ -1,11 +1,10 @@
-import LoginForm from "../../components/loginForm";
-import { Checkbox } from "@/components/ui/checkbox";
+import RegisterForm from "../../components/RegisterForm";
 import { Button } from "@/components/ui/button";
 import { FaGoogle } from "react-icons/fa";
 import { SiGoogletasks } from "react-icons/si";
 import LoginPageIcon from "../../../public/login-page-img";
 
-export default function login() {
+export default function register() {
   
   return (
     <div className="flex flex-row">
@@ -26,27 +25,15 @@ export default function login() {
 
               <div className="mt-5">
 
-                <LoginForm/>
+                <RegisterForm/>
 
-              <div className="flex mt-4">
-
-                <div className="items-top flex space-x-2 items-center">
-                  <Checkbox/>
-                  <p>Lembre de Mim</p>
-                </div>
-
-                <div className="ml-auto">
-                  <a className="underline" href="">Esqueci a Senha</a>
-                </div>
-
-              </div>
 
               <Button className="w-full h-12 mt-5 text-md" variant="outline">
-                <FaGoogle className="mr-3 size-5"/>Entrar com o Google
+                <FaGoogle className="mr-3 size-5"/>Cadastrar com o Google
               </Button>
 
               <div className="flex items-center justify-center mt-5">
-              <span>Não possui uma Conta? <a className="underline" href="/register">Criar</a></span>
+              <span>Ja possui uma Conta? <a className="underline" href="/login">Entrar</a></span>
 
               </div>
 
