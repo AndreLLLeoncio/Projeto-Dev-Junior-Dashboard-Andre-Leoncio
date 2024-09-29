@@ -5,6 +5,9 @@ import AddTask from "@/components/AddTask";
 import ShowTasks from "@/components/ShowTasks";
 import SearchBar from "@/components/SearchBar";
 import { useState, useEffect } from 'react';
+import CountTask from "@/components/CountTasks";
+
+import { Chart } from "@/components/Chart";
 
 interface Tarefa {
   id: number;
@@ -40,7 +43,10 @@ export default function Home() {
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           <AddTask setTarefas={setTarefas} />
         </div>
-        <div className="h-full w-4/12"></div>
+        <div className="h-full w-4/12">
+        <CountTask/>
+        <Chart/>
+        </div>
       </div>
     </div>
   );

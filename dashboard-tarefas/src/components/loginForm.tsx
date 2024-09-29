@@ -6,6 +6,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Importar useRouter
 
 // Definindo o esquema de validação com Zod
 const loginSchema = z.object({
@@ -17,6 +18,7 @@ const loginSchema = z.object({
 type LoginFormInputs = z.infer<typeof loginSchema>;
 
 export default function LoginForm() {
+  const router = useRouter(); // Instanciar o useRouter
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -29,23 +31,11 @@ export default function LoginForm() {
   const onSubmit = async (data: LoginFormInputs) => {
     setLoading(true);
     try {
-      const response = await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-  
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Erro ao fazer login');
-      }
-  
-      const result = await response.json();
-      console.log(result.message); // Mensagem de sucesso
-  
-      // Aqui você pode redirecionar o usuário ou fazer outra lógica após o login
+      setTimeout(() => {
+
+        router.push("/home"); // Substitua "/dashboard" pela URL desejada
+      }, 1000);
+      
     } catch (error: any) {
       console.error(error);
       // Aqui você pode exibir um erro para o usuário

@@ -1,67 +1,214 @@
 {
   "tarefas": [
     {
-      "id": 1727566176793,
-      "titulo": "sdfsdf",
-      "descricao": "fsdfs",
+      "id": 1727566176794,
+      "titulo": "Estudar Matemática",
+      "descricao": "Preciso revisar álgebra para a prova",
+      "status": "concluida",
+      "createdAt": "2024-07-02T03:21:18.448851"
+    },
+    {
+      "id": 1727566176795,
+      "titulo": "Ler um Livro",
+      "descricao": "Estou lendo um livro sobre história do Brasil",
+      "status": "concluida",
+      "createdAt": "2024-08-04T03:21:18.448877"
+    },
+    {
+      "id": 1727566176796,
+      "titulo": "Praticar Inglês",
+      "descricao": "Quero melhorar meu vocabulário em inglês",
+      "status": "concluida",
+      "createdAt": "2024-05-06T03:21:18.448885"
+    },
+    {
+      "id": 1727566176797,
+      "titulo": "Revisar Biologia",
+      "descricao": "Preciso estudar os sistemas do corpo humano",
       "status": "pendente",
-      "createdAt": "2024-09-28T23:29:36.793Z"
+      "createdAt": "2024-04-11T03:21:18.448890"
     },
     {
-      "id": 1727568289469,
-      "titulo": "sfdsf",
-      "descricao": "sfdsf",
-      "status": "completa",
-      "createdAt": "2024-09-29T00:04:49.469Z"
+      "id": 1727566176798,
+      "titulo": "Escrever um Ensaio",
+      "descricao": "Vou escrever sobre a importância da preservação ambiental",
+      "status": "concluida",
+      "createdAt": "2024-07-31T03:21:18.448897"
     },
     {
-      "id": 1727568305711,
-      "titulo": "testeeeee",
-      "descricao": "testsef fse sef s ef\nf\nsefs\n\nfsef",
+      "id": 1727566176799,
+      "titulo": "Estudar Química",
+      "descricao": "Revisar fórmulas e reações químicas",
+      "status": "concluida",
+      "createdAt": "2024-04-24T03:21:18.448902"
+    },
+    {
+      "id": 1727566176800,
+      "titulo": "Praticar Música",
+      "descricao": "Treinar piano para o recital",
       "status": "pendente",
-      "createdAt": "2024-09-29T00:05:05.711Z"
+      "createdAt": "2024-06-09T03:21:18.448907"
     },
     {
-      "id": 1727569294887,
-      "titulo": "fwefs",
-      "descricao": "fsef",
-      "status": "completa",
-      "createdAt": "2024-09-29T00:21:34.887Z"
+      "id": 1727566176801,
+      "titulo": "Preparar Apresentação",
+      "descricao": "Criar slides para a apresentação de projeto",
+      "status": "concluida",
+      "createdAt": "2024-04-05T03:21:18.448917"
     },
     {
-      "id": 1727569440564,
-      "titulo": "fgdg",
-      "descricao": "dgfdg",
-      "status": "completa",
-      "createdAt": "2024-09-29T00:24:00.564Z"
+      "id": 1727566176802,
+      "titulo": "Correr na Praça",
+      "descricao": "Fazer exercício ao ar livre",
+      "status": "concluida",
+      "createdAt": "2024-07-28T03:21:18.448924"
     },
     {
-      "id": 1727569448111,
-      "titulo": "ertert",
-      "descricao": "terte",
-      "status": "completa",
-      "createdAt": "2024-09-29T00:24:08.111Z"
-    },
-    {
-      "id": 1727569466067,
-      "titulo": "fwef",
-      "descricao": "fwef",
+      "id": 1727566176803,
+      "titulo": "Organizar Material Escolar",
+      "descricao": "Separar cadernos e livros para o próximo semestre",
       "status": "pendente",
-      "createdAt": "2024-09-29T00:24:26.067Z"
+      "createdAt": "2024-07-14T03:21:18.448929"
     },
     {
-      "id": 1727570358792,
-      "titulo": "tset",
-      "descricao": "sersr",
+      "id": 1727566176804,
+      "titulo": "Assistir Aula Online",
+      "descricao": "Participar da aula de programação",
       "status": "completa",
-      "createdAt": "2024-09-29T00:39:18.792Z"
+      "createdAt": "2024-09-27T03:21:18.448933"
     },
     {
-      "id": 1727572240203,
-      "titulo": "fsdfs",
-      "descricao": "fsdfsf",
+      "id": 1727566176805,
+      "titulo": "Fazer Compras",
+      "descricao": "Comprar materiais para o curso de arte",
       "status": "pendente",
-      "createdAt": "2024-09-29T01:10:40.203Z"
+      "createdAt": "2024-04-25T03:21:18.448938"
+    },
+    {
+      "id": 1727566176806,
+      "titulo": "Revisar Física",
+      "descricao": "Estudar movimentos e forças para a prova",
+      "status": "concluida",
+      "createdAt": "2024-08-06T03:21:18.448942"
+    },
+    {
+      "id": 1727566176807,
+      "titulo": "Participar de Grupo de Estudo",
+      "descricao": "Reunir com amigos para estudar juntos",
+      "status": "concluida",
+      "createdAt": "2024-07-11T03:21:18.448946"
+    },
+    {
+      "id": 1727566176808,
+      "titulo": "Revisar Notas",
+      "descricao": "Rever as anotações da aula passada",
+      "status": "pendente",
+      "createdAt": "2024-08-01T03:21:18.448949"
+    },
+    {
+      "id": 1727566176809,
+      "titulo": "Preparar Jantar",
+      "descricao": "Cozinhar algo saudável para a família",
+      "status": "concluida",
+      "createdAt": "2024-04-13T03:21:18.448953"
+    },
+    {
+      "id": 1727566176810,
+      "titulo": "Planejar Férias",
+      "descricao": "Pesquisar destinos e atividades para as férias",
+      "status": "pendente",
+      "createdAt": "2024-06-30T03:21:18.448957"
+    },
+    {
+      "id": 1727566176811,
+      "titulo": "Visitar Museu",
+      "descricao": "Aprender mais sobre arte e cultura local",
+      "status": "pendente",
+      "createdAt": "2024-04-08T03:21:18.448962"
+    },
+    {
+      "id": 1727566176812,
+      "titulo": "Praticar Esportes",
+      "descricao": "Jogar futebol com amigos",
+      "status": "pendente",
+      "createdAt": "2024-05-06T03:21:18.448966"
+    },
+    {
+      "id": 1727566176813,
+      "titulo": "Fazer Limpeza",
+      "descricao": "Organizar o quarto e a área de trabalho",
+      "status": "pendente",
+      "createdAt": "2024-05-05T03:21:18.448970"
+    },
+    {
+      "id": 1727566176814,
+      "titulo": "Treinar para Corrida",
+      "descricao": "Fazer uma visita a um amigo que não vejo há tempos",
+      "status": "concluida",
+      "createdAt": "2024-05-12T03:22:52.279441"
+    },
+    {
+      "id": 1727566176815,
+      "titulo": "Escrever Diário",
+      "descricao": "Fazer uma sessão de meditação guiada",
+      "status": "pendente",
+      "createdAt": "2024-04-19T03:22:52.279470"
+    },
+    {
+      "id": 1727566176816,
+      "titulo": "Praticar Francês",
+      "descricao": "Participar de um workshop de arte",
+      "status": "pendente",
+      "createdAt": "2024-05-15T03:22:52.279480"
+    },
+    {
+      "id": 1727566176817,
+      "titulo": "Treinar para Corrida",
+      "descricao": "Cozinhar um prato novo que encontrei na internet",
+      "status": "pendente",
+      "createdAt": "2024-04-19T03:22:52.279489"
+    },
+    {
+      "id": 1727566176818,
+      "titulo": "Fazer Meditação",
+      "descricao": "Treinar para a corrida de 10 km na próxima semana",
+      "status": "concluida",
+      "createdAt": "2024-06-25T03:22:52.279499"
+    },
+    {
+      "id": 1727566176819,
+      "titulo": "Participar de um Workshop",
+      "descricao": "Registrar meus pensamentos e reflexões",
+      "status": "concluida",
+      "createdAt": "2024-07-07T03:22:52.279508"
+    },
+    {
+      "id": 1727566176820,
+      "titulo": "Fazer Exercícios de Física",
+      "descricao": "Participar de um workshop de arte",
+      "status": "concluida",
+      "createdAt": "2024-04-09T03:22:52.279517"
+    },
+    {
+      "id": 1727566176821,
+      "titulo": "Treinar para Corrida",
+      "descricao": "Participar de um workshop de arte",
+      "status": "pendente",
+      "createdAt": "2024-08-06T03:22:52.279528"
+    },
+    {
+      "id": 1727566176822,
+      "titulo": "Estudar História",
+      "descricao": "Praticar diálogos em francês",
+      "status": "pendente",
+      "createdAt": "2024-09-02T03:22:52.279539"
+    },
+    {
+      "id": 1727566176823,
+      "titulo": "Praticar Francês",
+      "descricao": "Assistir a um documentário sobre natureza",
+      "status": "concluida",
+      "createdAt": "2024-06-04T03:22:52.279548"
     }
   ]
 }

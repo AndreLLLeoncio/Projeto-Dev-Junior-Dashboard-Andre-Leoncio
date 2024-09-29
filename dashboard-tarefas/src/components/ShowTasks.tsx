@@ -75,7 +75,7 @@ export default function ShowTasks({ tarefas, searchTerm, setSearchTerm }: ShowTa
               <h2 className='text-3xl'>{tarefa.titulo}</h2>
               <p>{tarefa.descricao}</p>
               <div className='flex flex-row items-center mt-5'>
-                <div className='text-black'>
+                <div className='text-white'>
                   <ChangeStatus
                     status={tarefa.status}
                     onChangeStatus={(newStatus) => updateStatus(tarefa.id, newStatus)}

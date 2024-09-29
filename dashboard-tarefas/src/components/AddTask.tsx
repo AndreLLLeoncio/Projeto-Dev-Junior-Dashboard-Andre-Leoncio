@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { IoIosAdd } from "react-icons/io";
 
 import { useState } from 'react';
@@ -21,7 +22,6 @@ interface Tarefa {
   descricao: string;
   status: 'pendente' | 'completa';
   createdAt: string;
-
 }
 
 interface AddTaskProps {
@@ -55,7 +55,7 @@ export default function AddTask({ setTarefas }: AddTaskProps) {
     <div>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button className="w-6/12 h-16"><IoIosAdd className="text-white text-3xl"/> Adicionar Tarefa</Button>
+          <Button className="w-6/12 h-16 rounded-xl"><IoIosAdd className="text-white text-3xl"/> Adicionar Tarefa</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -72,20 +72,20 @@ export default function AddTask({ setTarefas }: AddTaskProps) {
                 placeholder="Título"
                 value={titulo}
                 onChange={(e) => setTitulo(e.target.value)}
-                className="col-span-3"
+                className="col-span-3 border-2 border-zinc-600 rounded-md"
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="descricao" className="text-right">
                 Descrição
               </Label>
-              <textarea
+              <Textarea
                 id="descricao"
                 placeholder="Descrição"
                 value={descricao}
                 onChange={(e) => setDescricao(e.target.value)}
-                className="col-span-3"
-              ></textarea>
+                className="col-span-3 border-2 border-zinc-600 rounded-md"
+              />
             </div>
             <DialogFooter>
               <Button type="submit">Criar</Button>
