@@ -6,19 +6,19 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Importar useRouter
+import { useRouter } from "next/navigation"; 
 
-// Definindo o esquema de validação com Zod
+
 const loginSchema = z.object({
   email: z.string().email("E-mail inválido"),
   password: z.string().min(6, "A senha deve ter pelo menos 6 caracteres"),
 });
 
-// Definindo o tipo baseado no esquema
+
 type LoginFormInputs = z.infer<typeof loginSchema>;
 
 export default function LoginForm() {
-  const router = useRouter(); // Instanciar o useRouter
+  const router = useRouter(); 
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -33,12 +33,11 @@ export default function LoginForm() {
     try {
       setTimeout(() => {
 
-        router.push("/home"); // Substitua "/dashboard" pela URL desejada
+        router.push("/home"); 
       }, 1000);
       
     } catch (error: any) {
       console.error(error);
-      // Aqui você pode exibir um erro para o usuário
     } finally {
       setLoading(false);
     }

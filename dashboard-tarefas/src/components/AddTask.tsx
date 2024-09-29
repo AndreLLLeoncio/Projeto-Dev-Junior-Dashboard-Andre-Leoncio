@@ -52,10 +52,10 @@ export default function AddTask({ setTarefas }: AddTaskProps) {
   };
 
   return (
-    <div>
+    <div className="w-full flex">
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button className="w-6/12 h-16 rounded-xl"><IoIosAdd className="text-white text-3xl"/> Adicionar Tarefa</Button>
+          <Button className="w-6/12 lg:ml-0 ml-auto lg:h-16 h-10 rounded-xl"><IoIosAdd className="text-white text-3xl"/> Adicionar Tarefa</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>

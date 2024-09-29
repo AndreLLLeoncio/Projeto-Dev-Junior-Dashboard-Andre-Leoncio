@@ -8,18 +8,18 @@ import LoginPageIcon from "../../../public/login-page-img";
 export default function login() {
   
   return (
-    <div className="flex flex-row">
+    <div className="flex lg:flex-row flex-col">
 
 
 
       {/* Tela Esquerda */}
-      <div className="w-[50%] h-[100vh] flex flex-col items-center justify-center">
+      <div className="lg:w-[50%] w-full h-[100vh] flex flex-col items-center justify-center">
 
         <div className="w-full h-[10%] flex flex-row space-x-3 items-center">
           <SiGoogletasks className="size-8 ml-8"/> <p className="text-2xl">TaskFlow</p>
         </div>
 
-        <div className="w-2/3 h-[90%]">
+        <div className="md:w-2/3 w-10/12 h-[90%]">
           <div className="mt-16">
               <h1 className="text-3xl mb-3">Seja Bem Vindo</h1>
               <p className="text-gray-700">Por Favor Entre com as Suas Credenciais</p>
@@ -60,7 +60,7 @@ export default function login() {
 
 
       {/* Tela Direita */}
-      <div className="w-[50%] h-[100vh] bg-black flex items-center justify-center">
+      <div className="lg:w-[50%] w-full h-[100vh] bg-black lg:flex hidden items-center justify-center">
         <div className="w-[90%] flex items-center justify-center">
           <LoginPageIcon />
         </div>

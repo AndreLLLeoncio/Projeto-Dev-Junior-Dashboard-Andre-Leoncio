@@ -67,14 +67,14 @@ export default function ShowTasks({ tarefas, searchTerm, setSearchTerm }: ShowTa
     .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
   return (
-    <div className='w-11/12 h-full mt-5 text-white overflow-y-auto'>
+    <div className='w-11/12 h-full lg:pt-5 pt-0 text-white overflow-y-auto '>
       <ul>
         {filteredTarefas.map((tarefa) => (
           <div key={tarefa.id} className='h-1/5 w-11/12 bg-zinc-600 mb-4 p-4 rounded-lg mx-auto'>
             <li>
               <h2 className='text-3xl'>{tarefa.titulo}</h2>
               <p>{tarefa.descricao}</p>
-              <div className='flex flex-row items-center mt-5'>
+              <div className='flex flex-row lg:items-center items-start mt-5'>
                 <div className='text-white'>
                   <ChangeStatus
                     status={tarefa.status}

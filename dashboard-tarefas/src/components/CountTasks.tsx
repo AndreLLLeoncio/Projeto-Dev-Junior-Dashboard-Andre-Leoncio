@@ -32,7 +32,7 @@ const CountTask: React.FC = () => {
   }, [tarefas]);
 
   return (
-    <div className='w-full flex flex-row items-center justify-center space-x-8 mt-5'>
+    <div className='w-full flex lg:flex-row flex-col items-center justify-center lg:space-x-8 lg:space-y-0 space-y-5 mt-5 mb-10'>
 
       {/* Caixa de Tarefas Concluidas */}
       <div className="p-2 border border-gray-300 rounded shadow-md">

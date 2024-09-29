@@ -1,7 +1,18 @@
+"use client"; 
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation'; 
+
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/login');
+  }, [router]);
+
   return (
     <div>
-      <h1>ola mundo</h1>
+      <h1>Redirecionando...</h1>
     </div>
   );
 }

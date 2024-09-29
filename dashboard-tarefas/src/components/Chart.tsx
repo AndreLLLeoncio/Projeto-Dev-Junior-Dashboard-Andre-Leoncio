@@ -92,10 +92,10 @@ export function Chart() {
 
   return (
     <div className="w-full mt-5 flex items-center justify-center">
-      <Card className="bg-zinc-600 border-none">
+      <Card className="bg-zinc-600 border-none lg:w-10/12 w-11/12">
         <CardHeader>
           <CardTitle className="text-zinc-200">Tarefas</CardTitle>
-          <CardDescription className="text-zinc-400">Total de Tarefas nos ultimos 5 meses</CardDescription>
+          <CardDescription className="text-zinc-400">Contagem de Tarefas nos ultimos 5 meses</CardDescription>
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig}>

@@ -6,7 +6,7 @@ import ShowTasks from "@/components/ShowTasks";
 import SearchBar from "@/components/SearchBar";
 import { useState, useEffect } from 'react';
 import CountTask from "@/components/CountTasks";
-
+import { Calendario } from "@/components/Calendario";
 import { Chart } from "@/components/Chart";
 
 interface Tarefa {
@@ -34,19 +34,39 @@ export default function Home() {
 
   return (
     <div className="tw-full h-screen bg-zinc-400">
+      <div className="h-[12%]">
       <Header />
-      <div className="w-full h-[84%] flex flex-row">
-        <div className="h-full w-5/12">
+      </div>
+      
+
+      <div className="w-full h-[88%] flex lg:flex-row flex-col">
+
+        {/* Esquerda */}
+        <div className="lg:h-full h-5/6 lg:w-5/12 w-full lg:order-1 order-2 items-start justify-center flex ">
           <ShowTasks tarefas={tarefas} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </div>
-        <div className="h-full w-3/12 mt-5">
-          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-          <AddTask setTarefas={setTarefas} />
+
+        {/* Meio */}
+        <div className="lg:h-full h-1/6 lg:w-3/12 w-full mt-0 flex flex-col lg:order-2 order-1 lg:items-start items-center">
+          <div className="lg:w-full w-11/12">
+            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            <AddTask setTarefas={setTarefas} />
+          </div>
+
+          <div className="flex mx-auto mt-10">
+            <Calendario/>
+          </div>
+          
+
         </div>
-        <div className="h-full w-4/12">
-        <CountTask/>
-        <Chart/>
+
+
+        {/* Direita */}
+        <div className="h-full lg:block hidden w-4/12 lg:order-3 order-1 ">
+          <CountTask/>
+          <Chart/>
         </div>
+
       </div>
     </div>
   );

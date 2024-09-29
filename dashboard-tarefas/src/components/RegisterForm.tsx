@@ -6,6 +6,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const registerSchema = z
   .object({
@@ -16,13 +17,14 @@ const registerSchema = z
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "As senhas não coincidem",
-    path: ["confirmPassword"], // Campo a ser realçado em caso de erro
+    path: ["confirmPassword"],
   });
 
 type RegisterFormInputs = z.infer<typeof registerSchema>;
 
 export default function RegisterForm() {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -31,35 +33,13 @@ export default function RegisterForm() {
     resolver: zodResolver(registerSchema),
   });
 
-  const onSubmit = async (data: RegisterFormInputs) => {
+  const onSubmit = (data: RegisterFormInputs) => {
     setLoading(true);
-    try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          password: data.password,
-        }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Erro ao fazer cadastro');
-      }
-
-      const result = await response.json();
-      console.log(result.message);
-
-    } catch (error: any) {
-      console.error(error);
-
-    } finally {
+    setTimeout(() => {
+      console.log("Cadastro realizado com sucesso:", data);
       setLoading(false);
-    }
+      router.push("/home");
+    }, 2000);
   };
 
   return (

@@ -102,7 +102,7 @@
       "id": 1727566176808,
       "titulo": "Revisar Notas",
       "descricao": "Rever as anotações da aula passada",
-      "status": "pendente",
+      "status": "completa",
       "createdAt": "2024-08-01T03:21:18.448949"
     },
     {
@@ -123,14 +123,14 @@
       "id": 1727566176811,
       "titulo": "Visitar Museu",
       "descricao": "Aprender mais sobre arte e cultura local",
-      "status": "pendente",
+      "status": "completa",
       "createdAt": "2024-04-08T03:21:18.448962"
     },
     {
       "id": 1727566176812,
       "titulo": "Praticar Esportes",
       "descricao": "Jogar futebol com amigos",
-      "status": "pendente",
+      "status": "completa",
       "createdAt": "2024-05-06T03:21:18.448966"
     },
     {

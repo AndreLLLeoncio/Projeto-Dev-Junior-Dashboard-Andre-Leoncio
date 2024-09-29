@@ -1,36 +1,35 @@
-// app/api/tarefas/route.ts
 import { NextResponse } from 'next/server';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 
-// Definir a interface para os dados do banco
+
 interface Tarefa {
   id: number;
   titulo: string;
   descricao: string;
   status: 'pendente' | 'completa';
-  createdAt: string; // Nova propriedade para armazenar a data de criação
+  createdAt: string; 
 }
 
 interface DatabaseData {
   tarefas: Tarefa[];
 }
 
-// Configuração do LowDB
-const adapter = new JSONFile<DatabaseData>('db.json'); // O arquivo onde as tarefas serão armazenadas
-const db = new Low<DatabaseData>(adapter, { tarefas: [] }); // Estrutura de dados inicial
 
-// Inicializa o banco de dados
+const adapter = new JSONFile<DatabaseData>('db.json'); 
+const db = new Low<DatabaseData>(adapter, { tarefas: [] }); 
+
+
 async function initDB() {
   await db.read();
-  db.data ||= { tarefas: [] }; // Inicializa a lista de tarefas se não existir
+  db.data ||= { tarefas: [] };
   await db.write();
 }
 
-// Carregar tarefas
+
 async function loadTarefas() {
   await initDB();
-  return db.data!.tarefas; // O uso de "!" garante que o TypeScript entenda que `db.data` não é mais `unknown`
+  return db.data!.tarefas;
 }
 
 // Salvar tarefas
@@ -55,15 +54,15 @@ export async function POST(req: Request) {
   }
 
   const novaTarefa: Tarefa = {
-    id: Date.now(), // Use um timestamp como ID
+    id: Date.now(),
     titulo,
     descricao,
     status: 'pendente',
-    createdAt: new Date().toISOString(), // Definindo a data de criação
+    createdAt: new Date().toISOString(),
   };
 
-  db.data!.tarefas.push(novaTarefa); // Adiciona a nova tarefa
-  await saveTarefas(); // Salva as alterações
+  db.data!.tarefas.push(novaTarefa); 
+  await saveTarefas(); 
   return NextResponse.json(novaTarefa, { status: 201 });
 }
 
@@ -99,7 +98,7 @@ export async function DELETE(req: Request) {
     return NextResponse.json({ message: 'Tarefa não encontrada!' }, { status: 404 });
   }
 
-  db.data!.tarefas.splice(index, 1); // Remove a tarefa
-  await saveTarefas(); // Salva as alterações
+  db.data!.tarefas.splice(index, 1); 
+  await saveTarefas(); 
   return NextResponse.json({ message: 'Tarefa removida com sucesso!' });
 }
