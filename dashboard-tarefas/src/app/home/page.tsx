@@ -53,7 +53,7 @@ export default function Home() {
             <AddTask setTarefas={setTarefas} />
           </div>
 
-          <div className="flex mx-auto mt-10">
+          <div className="lg:flex hidden mx-auto mt-10">
             <Calendario/>
           </div>
           
